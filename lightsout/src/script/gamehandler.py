@@ -9,6 +9,8 @@ class GameHandler():
         game.window = pygame.display.set_mode([800, 600], pygame.SCALED, vsync=1)
         pygame.display.set_caption('Lights Out')
         game.clock = pygame.time.Clock()
+        game.img_off = pygame.image.load('asset/image/off.png').convert_alpha()
+        game.img_on = pygame.image.load('asset/image/on.png').convert_alpha()
         GameHandler.loop(game)
 
     @staticmethod
