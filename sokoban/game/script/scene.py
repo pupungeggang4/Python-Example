@@ -1,6 +1,7 @@
 import pygame, sys
 
 from .game import Game
+from .render import Render
 
 class Scene():
     @staticmethod
@@ -10,6 +11,7 @@ class Scene():
     @staticmethod
     def render(game: Game) -> None:
         game.window.fill([255, 255, 255])
+        Render.render_board(game, game.board)
         pygame.display.flip()
 
     @staticmethod
